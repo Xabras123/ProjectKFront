@@ -1,32 +1,25 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="font-mono bg-yellow-100" id="app">
+    <div id="nav" class="font-sans  flex justify-between p-2 bg-yellow-300 shadow-lg text-xl">
+      <router-link class="font-black text-2xl" to="/">Project K</router-link> 
+
+      <div class="text-bold flex justify-center">
+        <router-link class="mx-2" to="/">Crear Pelicula</router-link> |
+        <router-link class="mx-2" to="/movies">Peliculas</router-link>
+      </div>
+
     </div>
+
+
+
+
     <router-view/>
+
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
