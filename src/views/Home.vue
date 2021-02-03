@@ -1,8 +1,8 @@
 <template>
   <div class="w-full">
 
-    <div class="shadow-lg bg-gradient-to-b from-indigo-600 to-blue-700  text-center p-5 ">
-      <h1 class="text-gray-100 text-4xl">Creador de Peliculas</h1>
+    <div class="shadow-lg bg-gradient-to-b from-indigo-600 to-blue-700  text-center p-5">
+      <h1 class="text-gray-100 text-2xl">Creador de Peliculas</h1>
 
     </div>
 
@@ -95,6 +95,16 @@ export default {
       || this.trailerLink == "" || this.duration == 0 || this.releaseDate == "" ){
 
         alert('Porfavor llene todos los campos!')
+        return
+      }
+
+      if(this.title.length > 205){
+        alert('The title is too long')
+        return
+      }
+
+      if(this.synopsis.split(" ").length > 65){
+        alert('The synopsis is to long is too long')
         return
       }
 
